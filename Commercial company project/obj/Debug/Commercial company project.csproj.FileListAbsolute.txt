@@ -1,0 +1,90 @@
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\Commercial company project.exe.config
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\Commercial company project.exe
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\Commercial company project.pdb
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\EntityFramework.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\EntityFramework.SqlServer.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\Guna.UI.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\Microsoft.ReportViewer.Design.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\EnvDTE.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\stdole.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\EntityFramework.xml
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\EntityFramework.SqlServer.xml
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\zh-HANS\Microsoft.ReportViewer.Common.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\zh-HANT\Microsoft.ReportViewer.Common.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\zh-HANS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\zh-HANT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\zh-HANS\Microsoft.ReportViewer.Design.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\zh-HANT\Microsoft.ReportViewer.Design.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial company project.csproj.AssemblyReference.cache
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial company project.csproj.SuggestedBindingRedirects.cache
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial_company_project.Form1.resources
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial_company_project.Properties.Resources.resources
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial_company_project.Reports.ItemsReportForm.resources
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial_company_project.Reports.Models.StoredReportForm.resources
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial_company_project.Screens.Clients.ClientManagement.resources
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial_company_project.Screens.Items.AddItem.resources
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial_company_project.Screens.Items.EditItem.resources
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial_company_project.Screens.Stores.StoresForm.resources
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial_company_project.Screens.SupllyPermissionForm.resources
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial_company_project.Screens.Suppliers.Suppliers.resources
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial_company_project.Screens.Transfer.TransferForm.resources
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial_company_project.Screens.WithdrawalPermissionForm.resources
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial company project.csproj.GenerateResource.cache
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial company project.csproj.CoreCompileInputs.cache
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial company project.csproj.CopyComplete
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial company project.exe
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial company project.pdb
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial_company_project.Reports.TransferItemForm.resources
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial_company_project.Reports.TimeINStoreReportForm.resources
+D:\iTi\Entity FramWork\Commercial company project\Commercial company project\obj\Debug\Commercial_company_project.Reports.ExpairyDateReportForm.resources

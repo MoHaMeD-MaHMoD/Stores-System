@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c9505d35462f4161b4985442c229c3da" Name="Diagram1">
+        <EntityTypeShape EntityType="MOhamedModel.Customer" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MOhamedModel.Item" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MOhamedModel.MeasruingUnit" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MOhamedModel.ResponsiblePerson" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MOhamedModel.Store" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MOhamedModel.Supplier" Width="1.5" PointX="3" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MOhamedModel.SupplyPermission" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MOhamedModel.sysdiagram" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MOhamedModel.TransferItem" Width="1.5" PointX="8.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MOhamedModel.WithdrawPermission" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="MOhamedModel.FK__SupplyPer__ItemI__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="MOhamedModel.FK__TransferI__ItemI__1EA48E88" ManuallyRouted="false" />
+        <AssociationConnector Association="MOhamedModel.FK__WithdrawP__ItemI__160F4887" ManuallyRouted="false" />
+        <AssociationConnector Association="MOhamedModel.FK__SupplyPer__Measr__74AE54BC" ManuallyRouted="false" />
+        <AssociationConnector Association="MOhamedModel.FK__WithdrawP__Measr__18EBB532" ManuallyRouted="false" />
+        <AssociationConnector Association="MOhamedModel.FK__Stores__Responsi__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="MOhamedModel.FK__SupplyPer__Store__72C60C4A" ManuallyRouted="false" />
+        <AssociationConnector Association="MOhamedModel.FK__TransferI__FromS__1CBC4616" ManuallyRouted="false" />
+        <AssociationConnector Association="MOhamedModel.FK__TransferI__ToSto__1DB06A4F" ManuallyRouted="false" />
+        <AssociationConnector Association="MOhamedModel.FK__WithdrawP__Store__17036CC0" ManuallyRouted="false" />
+        <AssociationConnector Association="MOhamedModel.FK__SupplyPer__Suppl__73BA3083" ManuallyRouted="false" />
+        <AssociationConnector Association="MOhamedModel.FK__TransferI__Suppl__1F98B2C1" ManuallyRouted="false" />
+        <AssociationConnector Association="MOhamedModel.FK__WithdrawP__Suppl__17F790F9" ManuallyRouted="false" />
+        <AssociationConnector Association="MOhamedModel.ItemMeasreUnit" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

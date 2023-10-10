@@ -1,0 +1,859 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB388126-14C0-4B82-9D15-F3AADCEDDADE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Commercial_company_project</RootNamespace>
+    <AssemblyName>Commercial company project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\.Net\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\Customer.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\GetExpairyDate_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\getMesaringUnits_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\getTimeInstore_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\getTransferItems_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Item.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\itemInStoresIn_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\MeasruingUnit.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\ResponsiblePerson.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Store.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\StoreItemIn_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Supplier.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\supplyin_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\supplyout_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\SupplyPermission.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\sysdiagram.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\TransferItem.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\WithdrawPermission.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemNameItemIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemNameItemIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet151.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet151.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MOhamedDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MOhamedDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\ExpairyDateReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ExpairyDateReportForm.Designer.cs">
+      <DependentUpon>ExpairyDateReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ItemsReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ItemsReportForm.Designer.cs">
+      <DependentUpon>ItemsReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StoredReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\StoredReportForm.Designer.cs">
+      <DependentUpon>StoredReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TimeINStoreReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\TimeINStoreReportForm.Designer.cs">
+      <DependentUpon>TimeINStoreReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TransferItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\TransferItemForm.Designer.cs">
+      <DependentUpon>TransferItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Clients\ClientManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Clients\ClientManagement.Designer.cs">
+      <DependentUpon>ClientManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Items\AddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Items\AddItem.Designer.cs">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Items\EditItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Items\EditItem.Designer.cs">
+      <DependentUpon>EditItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Items\MeasruingUnits.cs" />
+    <Compile Include="Screens\Stores\StoresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Stores\StoresForm.Designer.cs">
+      <DependentUpon>StoresForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SupllyPermissionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\SupllyPermissionForm.Designer.cs">
+      <DependentUpon>SupllyPermissionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Suppliers\Suppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Suppliers\Suppliers.Designer.cs">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Transfer\TransferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Transfer\TransferForm.Designer.cs">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\WithdrawalPermissionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\WithdrawalPermissionForm.Designer.cs">
+      <DependentUpon>WithdrawalPermissionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="StoreID_Name.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StoreID_Name.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StoresIDNAME.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StoresIDNAME.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\ExpairyDateReportForm.resx">
+      <DependentUpon>ExpairyDateReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ItemsReportForm.resx">
+      <DependentUpon>ItemsReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StoredReportForm.resx">
+      <DependentUpon>StoredReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TimeINStoreReportForm.resx">
+      <DependentUpon>TimeINStoreReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TransferItemForm.resx">
+      <DependentUpon>TransferItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Clients\ClientManagement.resx">
+      <DependentUpon>ClientManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Items\AddItem.resx">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Items\EditItem.resx">
+      <DependentUpon>EditItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Stores\StoresForm.resx">
+      <DependentUpon>StoresForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\SupllyPermissionForm.resx">
+      <DependentUpon>SupllyPermissionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Suppliers\Suppliers.resx">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Transfer\TransferForm.resx">
+      <DependentUpon>TransferForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\WithdrawalPermissionForm.resx">
+      <DependentUpon>WithdrawalPermissionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="DB\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="ItemNameItemIDDataSet.xsc">
+      <DependentUpon>ItemNameItemIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ItemNameItemIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ItemNameItemIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ItemNameItemIDDataSet.xss">
+      <DependentUpon>ItemNameItemIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet.xsc">
+      <DependentUpon>MOhamedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet.xss">
+      <DependentUpon>MOhamedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet1.xsc">
+      <DependentUpon>MOhamedDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet1.xss">
+      <DependentUpon>MOhamedDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet10.xsc">
+      <DependentUpon>MOhamedDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet10.xss">
+      <DependentUpon>MOhamedDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet11.xsc">
+      <DependentUpon>MOhamedDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet11.xss">
+      <DependentUpon>MOhamedDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet12.xsc">
+      <DependentUpon>MOhamedDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet12.xss">
+      <DependentUpon>MOhamedDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet13.xsc">
+      <DependentUpon>MOhamedDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet13.xss">
+      <DependentUpon>MOhamedDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet14.xsc">
+      <DependentUpon>MOhamedDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet14.xss">
+      <DependentUpon>MOhamedDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet151.xsc">
+      <DependentUpon>MOhamedDataSet151.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet151.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet151.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet151.xss">
+      <DependentUpon>MOhamedDataSet151.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet16.xsc">
+      <DependentUpon>MOhamedDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet16.xss">
+      <DependentUpon>MOhamedDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet17.xsc">
+      <DependentUpon>MOhamedDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet17.xss">
+      <DependentUpon>MOhamedDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet18.xsc">
+      <DependentUpon>MOhamedDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet18.xss">
+      <DependentUpon>MOhamedDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet19.xsc">
+      <DependentUpon>MOhamedDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet19.xss">
+      <DependentUpon>MOhamedDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet2.xsc">
+      <DependentUpon>MOhamedDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet2.xss">
+      <DependentUpon>MOhamedDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet20.xsc">
+      <DependentUpon>MOhamedDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet20.xss">
+      <DependentUpon>MOhamedDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet21.xsc">
+      <DependentUpon>MOhamedDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet21.xss">
+      <DependentUpon>MOhamedDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet22.xsc">
+      <DependentUpon>MOhamedDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet22.xss">
+      <DependentUpon>MOhamedDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet23.xsc">
+      <DependentUpon>MOhamedDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet23.xss">
+      <DependentUpon>MOhamedDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet24.xsc">
+      <DependentUpon>MOhamedDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet24.xss">
+      <DependentUpon>MOhamedDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet25.xsc">
+      <DependentUpon>MOhamedDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet25.xss">
+      <DependentUpon>MOhamedDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet26.xsc">
+      <DependentUpon>MOhamedDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet26.xss">
+      <DependentUpon>MOhamedDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet3.xsc">
+      <DependentUpon>MOhamedDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet3.xss">
+      <DependentUpon>MOhamedDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet4.xsc">
+      <DependentUpon>MOhamedDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet4.xss">
+      <DependentUpon>MOhamedDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet5.xsc">
+      <DependentUpon>MOhamedDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet5.xss">
+      <DependentUpon>MOhamedDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet6.xsc">
+      <DependentUpon>MOhamedDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet6.xss">
+      <DependentUpon>MOhamedDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet7.xsc">
+      <DependentUpon>MOhamedDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet7.xss">
+      <DependentUpon>MOhamedDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet8.xsc">
+      <DependentUpon>MOhamedDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet8.xss">
+      <DependentUpon>MOhamedDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet9.xsc">
+      <DependentUpon>MOhamedDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="MOhamedDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MOhamedDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MOhamedDataSet9.xss">
+      <DependentUpon>MOhamedDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Commercial_company_project.DB.StoreItemIn_Result.datasource" />
+    <None Include="Properties\DataSources\MOhamedDataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="StoreID_Name.xsc">
+      <DependentUpon>StoreID_Name.xsd</DependentUpon>
+    </None>
+    <None Include="StoreID_Name.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StoreID_Name.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StoreID_Name.xss">
+      <DependentUpon>StoreID_Name.xsd</DependentUpon>
+    </None>
+    <None Include="StoresIDNAME.xsc">
+      <DependentUpon>StoresIDNAME.xsd</DependentUpon>
+    </None>
+    <None Include="StoresIDNAME.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StoresIDNAME.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StoresIDNAME.xss">
+      <DependentUpon>StoresIDNAME.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\supplier.png" />
+    <None Include="Images\client.png" />
+    <None Include="Images\5183000.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MOhamedModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Website" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemCode" Type="Int32" />
+    <Property Name="ItemName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SupplyPermissions" Relationship="Self.FK__SupplyPer__ItemI__71D1E811" FromRole="Items" ToRole="SupplyPermission" />
+    <NavigationProperty Name="TransferItems" Relationship="Self.FK__TransferI__ItemI__1EA48E88" FromRole="Items" ToRole="TransferItems" />
+    <NavigationProperty Name="WithdrawPermissions" Relationship="Self.FK__WithdrawP__ItemI__160F4887" FromRole="Items" ToRole="WithdrawPermission" />
+    <NavigationProperty Name="MeasruingUnits" Relationship="Self.ItemMeasreUnit" FromRole="Items" ToRole="MeasruingUnit" />
+  </EntityType>
+  <EntityType Name="MeasruingUnit">
+    <Key>
+      <PropertyRef Name="UnitID" />
+    </Key>
+    <Property Name="UnitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UnitName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SupplyPermissions" Relationship="Self.FK__SupplyPer__Measr__74AE54BC" FromRole="MeasruingUnit" ToRole="SupplyPermission" />
+    <NavigationProperty Name="WithdrawPermissions" Relationship="Self.FK__WithdrawP__Measr__18EBB532" FromRole="MeasruingUnit" ToRole="WithdrawPermission" />
+    <NavigationProperty Name="Items" Relationship="Self.ItemMeasreUnit" FromRole="MeasruingUnit" ToRole="Items" />
+  </EntityType>
+  <EntityType Name="ResponsiblePerson">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Name="PersonID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Stores" Relationship="Self.FK__Stores__Responsi__5EBF139D" FromRole="ResponsiblePerson" ToRole="Stores" />
+  </EntityType>
+  <EntityType Name="Store">
+    <Key>
+      <PropertyRef Name="StoreID" />
+    </Key>
+    <Property Name="StoreID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StoreName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="StoreAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Responsible" Type="Int32" />
+    <NavigationProperty Name="ResponsiblePerson" Relationship="Self.FK__Stores__Responsi__5EBF139D" FromRole="Stores" ToRole="ResponsiblePerson" />
+    <NavigationProperty Name="SupplyPermissions" Relationship="Self.FK__SupplyPer__Store__72C60C4A" FromRole="Stores" ToRole="SupplyPermission" />
+    <NavigationProperty Name="TransferItems" Relationship="Self.FK__TransferI__FromS__1CBC4616" FromRole="Stores" ToRole="TransferItems" />
+    <NavigationProperty Name="TransferItems1" Relationship="Self.FK__TransferI__ToSto__1DB06A4F" FromRole="Stores" ToRole="TransferItems" />
+    <NavigationProperty Name="WithdrawPermissions" Relationship="Self.FK__WithdrawP__Store__17036CC0" FromRole="Stores" ToRole="WithdrawPermission" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Fax" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Website" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="SupplyPermissions" Relationship="Self.FK__SupplyPer__Suppl__73BA3083" FromRole="Suppliers" ToRole="SupplyPermission" />
+    <NavigationProperty Name="TransferItems" Relationship="Self.FK__TransferI__Suppl__1F98B2C1" FromRole="Suppliers" ToRole="TransferItems" />
+    <NavigationProperty Name="WithdrawPermissions" Relationship="Self.FK__WithdrawP__Suppl__17F790F9" FromRole="Suppliers" ToRole="WithdrawPermission" />
+  </EntityType>
+  <EntityType Name="SupplyPermission">
+    <Key>
+      <PropertyRef Name="OrderNumber" />
+    </Key>
+    <Property Name="OrderNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StoreID" Type="Int32" />
+    <Property Name="OrderDate" Type="DateTime" Precision="0" />
+    <Property Name="SupplierID" Type="Int32" />
+    <Property Name="ProductionDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+    <Property Name="ItemID" Type="Int32" />
+    <Property Name="MeasreuingUnit" Type="Int32" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Price" Type="Int32" />
+    <NavigationProperty Name="Item" Relationship="Self.FK__SupplyPer__ItemI__71D1E811" FromRole="SupplyPermission" ToRole="Items" />
+    <NavigationProperty Name="MeasruingUnit" Relationship="Self.FK__SupplyPer__Measr__74AE54BC" FromRole="SupplyPermission" ToRole="MeasruingUnit" />
+    <NavigationProperty Name="Store" Relationship="Self.FK__SupplyPer__Store__72C60C4A" FromRole="SupplyPermission" ToRole="Stores" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK__SupplyPer__Suppl__73BA3083" FromRole="SupplyPermission" ToRole="Suppliers" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TransferItem">
+    <Key>
+      <PropertyRef Name="TransferID" />
+    </Key>
+    <Property Name="TransferID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TransferDate" Type="DateTime" Precision="0" />
+    <Property Name="FromStoreID" Type="Int32" />
+    <Property Name="ToStoreID" Type="Int32" />
+    <Property Name="ItemID" Type="Int32" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="SupplierID" Type="Int32" />
+    <Property Name="ProductionDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Item" Relationship="Self.FK__TransferI__ItemI__1EA48E88" FromRole="TransferItems" ToRole="Items" />
+    <NavigationProperty Name="Store" Relationship="Self.FK__TransferI__FromS__1CBC4616" FromRole="TransferItems" ToRole="Stores" />
+    <NavigationProperty Name="Store1" Relationship="Self.FK__TransferI__ToSto__1DB06A4F" FromRole="TransferItems" ToRole="Stores" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK__TransferI__Suppl__1F98B2C1" FromRole="TransferItems" ToRole="Suppliers" />
+  </EntityType>
+  <EntityType Name="WithdrawPermission">
+    <Key>
+      <PropertyRef Name="OrderNumber" />
+    </Key>
+    <Property Name="OrderNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StoreID" Type="Int32" />
+    <Property Name="OrderDate" Type="DateTime" Precision="0" />
+    <Property Name="SupplierID" Type="Int32" />
+    <Property Name="ItemID" Type="Int32" />
+    <Property Name="MeasreuingUnit" Type="Int32" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Price" Type="Int32" />
+    <NavigationProperty Name="Item" Relationship="Self.FK__WithdrawP__ItemI__160F4887" FromRole="WithdrawPermission" ToRole="Items" />
+    <NavigationProperty Name="MeasruingUnit" Relationship="Self.FK__WithdrawP__Measr__18EBB532" FromRole="WithdrawPermission" ToRole="MeasruingUnit" />
+    <NavigationProperty Name="Store" Relationship="Self.FK__WithdrawP__Store__17036CC0" FromRole="WithdrawPermission" ToRole="Stores" />
+    <NavigationProperty Name="Supplier" Relationship="Self.FK__WithdrawP__Suppl__17F790F9" FromRole="WithdrawPermission" ToRole="Suppliers" />
+  </EntityType>
+  <Association Name="FK__SupplyPer__ItemI__71D1E811">
+    <End Role="Items" Type="Self.Item" Multiplicity="0..1" />
+    <End Role="SupplyPermission" Type="Self.SupplyPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="SupplyPermission">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TransferI__ItemI__1EA48E88">
+    <End Role="Items" Type="Self.Item" Multiplicity="0..1" />
+    <End Role="TransferItems" Type="Self.TransferItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="TransferItems">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__WithdrawP__ItemI__160F4887">
+    <End Role="Items" Type="Self.Item" Multiplicity="0..1" />
+    <End Role="WithdrawPermission" Type="Self.WithdrawPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="WithdrawPermission">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SupplyPer__Measr__74AE54BC">
+    <End Role="MeasruingUnit" Type="Self.MeasruingUnit" Multiplicity="0..1" />
+    <End Role="SupplyPermission" Type="Self.SupplyPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MeasruingUnit">
+        <PropertyRef Name="UnitID" />
+      </Principal>
+      <Dependent Role="SupplyPermission">
+        <PropertyRef Name="MeasreuingUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__WithdrawP__Measr__18EBB532">
+    <End Role="MeasruingUnit" Type="Self.MeasruingUnit" Multiplicity="0..1" />
+    <End Role="WithdrawPermission" Type="Self.WithdrawPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MeasruingUnit">
+        <PropertyRef Name="UnitID" />
+      </Principal>
+      <Dependent Role="WithdrawPermission">
+        <PropertyRef Name="MeasreuingUnit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Stores__Responsi__5EBF139D">
+    <End Role="ResponsiblePerson" Type="Self.ResponsiblePerson" Multiplicity="0..1" />
+    <End Role="Stores" Type="Self.Store" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResponsiblePerson">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="Stores">
+        <PropertyRef Name="Responsible" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SupplyPer__Store__72C60C4A">
+    <End Role="Stores" Type="Self.Store" Multiplicity="0..1" />
+    <End Role="SupplyPermission" Type="Self.SupplyPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="SupplyPermission">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TransferI__FromS__1CBC4616">
+    <End Role="Stores" Type="Self.Store" Multiplicity="0..1" />
+    <End Role="TransferItems" Type="Self.TransferItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="TransferItems">
+        <PropertyRef Name="FromStoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TransferI__ToSto__1DB06A4F">
+    <End Role="Stores" Type="Self.Store" Multiplicity="0..1" />
+    <End Role="TransferItems" Type="Self.TransferItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="TransferItems">
+        <PropertyRef Name="ToStoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__WithdrawP__Store__17036CC0">
+    <End Role="Stores" Type="Self.Store" Multiplicity="0..1" />
+    <End Role="WithdrawPermission" Type="Self.WithdrawPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stores">
+        <PropertyRef Name="StoreID" />
+      </Principal>
+      <Dependent Role="WithdrawPermission">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SupplyPer__Suppl__73BA3083">
+    <End Role="Suppliers" Type="Self.Supplier" Multiplicity="0..1" />
+    <End Role="SupplyPermission" Type="Self.SupplyPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="SupplyPermission">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TransferI__Suppl__1F98B2C1">
+    <End Role="Suppliers" Type="Self.Supplier" Multiplicity="0..1" />
+    <End Role="TransferItems" Type="Self.TransferItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="TransferItems">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__WithdrawP__Suppl__17F790F9">
+    <End Role="Suppliers" Type="Self.Supplier" Multiplicity="0..1" />
+    <End Role="WithdrawPermission" Type="Self.WithdrawPermission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="WithdrawPermission">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ItemMeasreUnit">
+    <End Role="Items" Type="Self.Item" Multiplicity="*" />
+    <End Role="MeasruingUnit" Type="Self.MeasruingUnit" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="MOhamedEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="Items" EntityType="Self.Item" />
+    <EntitySet Name="MeasruingUnits" EntityType="Self.MeasruingUnit" />
+    <EntitySet Name="ResponsiblePersons" EntityType="Self.ResponsiblePerson" />
+    <EntitySet Name="Stores" EntityType="Self.Store" />
+    <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
+    <EntitySet Name="SupplyPermissions" EntityType="Self.SupplyPermission" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="TransferItems" EntityType="Self.TransferItem" />
+    <EntitySet Name="WithdrawPermissions" EntityType="Self.WithdrawPermission" />
+    <AssociationSet Name="FK__SupplyPer__ItemI__71D1E811" Association="Self.FK__SupplyPer__ItemI__71D1E811">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="SupplyPermission" EntitySet="SupplyPermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TransferI__ItemI__1EA48E88" Association="Self.FK__TransferI__ItemI__1EA48E88">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="TransferItems" EntitySet="TransferItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WithdrawP__ItemI__160F4887" Association="Self.FK__WithdrawP__ItemI__160F4887">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="WithdrawPermission" EntitySet="WithdrawPermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SupplyPer__Measr__74AE54BC" Association="Self.FK__SupplyPer__Measr__74AE54BC">
+      <End Role="MeasruingUnit" EntitySet="MeasruingUnits" />
+      <End Role="SupplyPermission" EntitySet="SupplyPermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WithdrawP__Measr__18EBB532" Association="Self.FK__WithdrawP__Measr__18EBB532">
+      <End Role="MeasruingUnit" EntitySet="MeasruingUnits" />
+      <End Role="WithdrawPermission" EntitySet="WithdrawPermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Stores__Responsi__5EBF139D" Association="Self.FK__Stores__Responsi__5EBF139D">
+      <End Role="ResponsiblePerson" EntitySet="ResponsiblePersons" />
+      <End Role="Stores" EntitySet="Stores" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SupplyPer__Store__72C60C4A" Association="Self.FK__SupplyPer__Store__72C60C4A">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="SupplyPermission" EntitySet="SupplyPermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TransferI__FromS__1CBC4616" Association="Self.FK__TransferI__FromS__1CBC4616">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="TransferItems" EntitySet="TransferItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TransferI__ToSto__1DB06A4F" Association="Self.FK__TransferI__ToSto__1DB06A4F">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="TransferItems" EntitySet="TransferItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WithdrawP__Store__17036CC0" Association="Self.FK__WithdrawP__Store__17036CC0">
+      <End Role="Stores" EntitySet="Stores" />
+      <End Role="WithdrawPermission" EntitySet="WithdrawPermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SupplyPer__Suppl__73BA3083" Association="Self.FK__SupplyPer__Suppl__73BA3083">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="SupplyPermission" EntitySet="SupplyPermissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TransferI__Suppl__1F98B2C1" Association="Self.FK__TransferI__Suppl__1F98B2C1">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="TransferItems" EntitySet="TransferItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WithdrawP__Suppl__17F790F9" Association="Self.FK__WithdrawP__Suppl__17F790F9">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="WithdrawPermission" EntitySet="WithdrawPermissions" />
+    </AssociationSet>
+    <AssociationSet Name="ItemMeasreUnit" Association="Self.ItemMeasreUnit">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="MeasruingUnit" EntitySet="MeasruingUnits" />
+    </AssociationSet>
+    <FunctionImport Name="GetExpairyDate" ReturnType="Collection(MOhamedModel.GetExpairyDate_Result)">
+      <Parameter Name="YoursTimeDurationInDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="getMesaringUnits" ReturnType="Collection(MOhamedModel.getMesaringUnits_Result)">
+      <Parameter Name="IID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="getTimeInstore" ReturnType="Collection(MOhamedModel.getTimeInstore_Result)">
+      <Parameter Name="YourTimeDurationInDays" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="getTransferItems" ReturnType="Collection(MOhamedModel.getTransferItems_Result)">
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="itemInStoresIn" ReturnType="Collection(MOhamedModel.itemInStoresIn_Result)">
+      <Parameter Name="ItemID" Mode="In" Type="Int32" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="StoreItemIn" ReturnType="Collection(MOhamedModel.StoreItemIn_Result)">
+      <Parameter Name="SID" Mode="In" Type="Int32" />
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="supplyin" ReturnType="Collection(MOhamedModel.supplyin_Result)">
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="supplyout" ReturnType="Collection(MOhamedModel.supplyout_Result)">
+      <Parameter Name="FromDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ToDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="GetExpairyDate_Result">
+    <Property Type="String" Name="ItemName" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="ItemID" Nullable="true" />
+    <Property Type="Int32" Name="StoreID" Nullable="true" />
+    <Property Type="String" Name="StoreName" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="Quantity" Nullable="true" />
+    <Property Type="Int32" Name="MeasreuingUnit" Nullable="true" />
+    <Property Type="DateTime" Name="ProductionDate" Nullable="true" />
+    <Property Type="DateTime" Name="ExpiryDate" Nullable="true" />
+    <Property Type="Int32" Name="RemainingDays" Nullable="true" />
+    <Property Type="String" Name="UnitName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="getMesaringUnits_Result">
+    <Property Type="String" Name="ItemName" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="UnitName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="getTimeInstore_Result">
+    <Property Type="Int32" Name="ItemID" Nullable="true" />
+    <Property Type="String" Name="ItemName" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="StoreID" Nullable="true" />
+    <Property Type="String" Name="StoreName" Nullable="true" MaxLength="255" />
+    <Property Type="DateTime" Name="OrderDate" Nullable="true" />
+    <Property Type="Int32" Name="Quantity" Nullable="true" />
+    <Property Type="String" Name="UnitName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="getTransferItems_Result">
+    <Property Type="Int32" Name="FromStoreID" Nullable="true" />
+    <Property Type="Int32" Name="ToStoreID" Nullable="true" />
+    <Property Type="DateTime" Name="TransferDate" Nullable="true" />
+    <Property Type="String" Name="ItemName" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="FromStoreName" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="ToStoreName" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="Quantity" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="itemInStoresIn_Result">
+    <Property Type="Int32" Name="StoreID" Nullable="true" />
+    <Property Type="DateTime" Name="OrderDate" Nullable="true" />
+    <Property Type="String" Name="SupplierName" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="ItemName" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="Quantity" Nullable="true" />
+    <Property Type="String" Name="UnitName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Price" Nullable="true" />
+    <Property Type="String" Name="StoreName" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="StoreItemIn_Result">
+    <Property Type="Int32" Name="StoreID" Nullable="true" />
+    <Property Type="DateTime" Name="OrderDate" Nullable="true" />
+    <Property Type="String" Name="SupplierName" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="ItemName" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="Quantity" Nullable="true" />
+    <Property Type="String" Name="UnitName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Price" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="supplyin_Result">
+    <Property Type="Int32" Name="StoreID" Nullable="true" />
+    <Property Type="DateTime" Name="OrderDate" Nullable="true" />
+    <Property Type="String" Name="SupplierName" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="ItemName" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="Quantity" Nullable="true" />
+    <Property Type="String" Name="UnitName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Price" Nullable="true" />
+    <Property Type="String" Name="StoreName" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <ComplexType Name="supplyout_Result">
+    <Property Type="Int32" Name="StoreID" Nullable="true" />
+    <Property Type="DateTime" Name="OrderDate" Nullable="true" />
+    <Property Type="String" Name="SupplierName" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="ItemName" Nullable="true" MaxLength="255" />
+    <Property Type="Int32" Name="Quantity" Nullable="true" />
+    <Property Type="String" Name="UnitName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Price" Nullable="true" />
+    <Property Type="String" Name="StoreName" Nullable="true" MaxLength="255" />
+  </ComplexType>
+</Schema>

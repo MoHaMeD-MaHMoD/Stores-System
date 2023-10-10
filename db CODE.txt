@@ -1,0 +1,87 @@
+-- Create Stores Table
+CREATE TABLE Stores (
+    StoreID INT PRIMARY KEY AUTO INCREMENT,
+    StoreName VARCHAR(255),
+    StoreAddress VARCHAR(255),
+    ResponsiblePerson VARCHAR(255)
+);
+
+-- Create Items Table
+CREATE TABLE Items (
+    ItemID INT PRIMARY KEY AUTO INCREMENT,
+    ItemCode VARCHAR(50),
+    ItemName VARCHAR(255),
+    MeasurementUnit VARCHAR(50)
+);
+
+-- Create Suppliers Table
+CREATE TABLE Suppliers (
+    SupplierID INT PRIMARY KEY AUTO INCREMENT,
+    SupplierName VARCHAR(255),
+    Phone VARCHAR(15),
+    Fax VARCHAR(15),
+    Mobile VARCHAR(15),
+    Email VARCHAR(255),
+    Website VARCHAR(255)
+);
+
+-- Create Customers Table
+CREATE TABLE Customers (
+    CustomerID INT PRIMARY KEY AUTO INCREMENT,
+    CustomerName VARCHAR(255),
+    Phone VARCHAR(15),
+    Fax VARCHAR(15),
+    Mobile VARCHAR(15),
+    Email VARCHAR(255),
+    Website VARCHAR(255)
+);
+
+-- Create SupplyPermission Table
+CREATE TABLE SupplyPermission (
+    PermissionID INT PRIMARY KEY,
+    StoreID INT,
+    OrderNumber VARCHAR(50),
+    OrderDate DATE,
+    SupplierID INT,
+    ProductionDate DATE,
+    ExpiryDate DATE,
+	ItemID INT,
+    Quantity INT,
+
+    FOREIGN KEY (ItemID) REFERENCES Items(ItemID),
+    FOREIGN KEY (StoreID) REFERENCES Stores(StoreID),
+    FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID)
+);
+
+-- Create WithdrawPermission Table
+CREATE TABLE WithdrawPermission (
+    PermissionID INT PRIMARY KEY,
+    StoreID INT,
+    OrderNumber VARCHAR(50),
+    OrderDate DATE,
+    SupplierID INT,
+	ItemID INT,
+    Quantity INT,
+
+    FOREIGN KEY (ItemID) REFERENCES Items(ItemID),
+    FOREIGN KEY (StoreID) REFERENCES Stores(StoreID),
+    FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID)
+);
+
+
+-- Create TransferItems Table
+CREATE TABLE TransferItems (
+    TransferID INT PRIMARY KEY AUTO INCREMENT,
+    FromStoreID INT,
+    ToStoreID INT,
+    ItemID INT,
+    Quantity INT,
+    SupplierID INT,
+    ProductionDate DATE,
+    ExpiryDate DATE,
+    FOREIGN KEY (FromStoreID) REFERENCES Stores(StoreID),
+    FOREIGN KEY (ToStoreID) REFERENCES Stores(StoreID),
+    FOREIGN KEY (ItemID) REFERENCES Items(ItemID),
+    FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID)
+);
+
